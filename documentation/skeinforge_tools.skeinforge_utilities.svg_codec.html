@@ -1,0 +1,107 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module skeinforge_tools.skeinforge_utilities.svg_codec</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="skeinforge_tools.html"><font color="#ffffff">skeinforge_tools</font></a>.<a href="skeinforge_tools.skeinforge_utilities.html"><font color="#ffffff">skeinforge_utilities</font></a>.svg_codec</strong></big></big> ($Date: 2008/02/05 $)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/enrique/Desktop/backup/babbleold/script/reprap/pyRepRap/skeinforge_tools/skeinforge_utilities/svg_codec.py">/home/enrique/Desktop/backup/babbleold/script/reprap/pyRepRap/skeinforge_tools/skeinforge_utilities/svg_codec.py</a></font></td></tr></table>
+    <p><tt>Svg_codec is a class and collection of utilities to read from and write to an svg file.<br>
+ <br>
+Svg_codec uses the svg_layer.template file in the same folder as svg_codec, to output an svg file.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="__init__.html">__init__</a><br>
+<a href="cStringIO.html">cStringIO</a><br>
+</td><td width="25%" valign=top><a href="skeinforge_tools.skeinforge_utilities.euclidean.html">skeinforge_tools.skeinforge_utilities.euclidean</a><br>
+<a href="skeinforge_tools.skeinforge_utilities.gcodec.html">skeinforge_tools.skeinforge_utilities.gcodec</a><br>
+</td><td width="25%" valign=top><a href="skeinforge_tools.skeinforge_utilities.interpret.html">skeinforge_tools.skeinforge_utilities.interpret</a><br>
+<a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="skeinforge_tools.skeinforge_utilities.triangle_mesh.html">skeinforge_tools.skeinforge_utilities.triangle_mesh</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="skeinforge_tools.skeinforge_utilities.svg_codec.html#SVGCodecSkein">SVGCodecSkein</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SVGCodecSkein">class <strong>SVGCodecSkein</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;base&nbsp;class&nbsp;to&nbsp;get&nbsp;an&nbsp;svg&nbsp;skein&nbsp;from&nbsp;a&nbsp;carving.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="SVGCodecSkein-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SVGCodecSkein-addLayerBegin"><strong>addLayerBegin</strong></a>(self, layerIndex, z)</dt><dd><tt>Add&nbsp;the&nbsp;start&nbsp;lines&nbsp;for&nbsp;the&nbsp;layer.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-addLayerEnd"><strong>addLayerEnd</strong></a>(self, rotatedBoundaryLayer)</dt><dd><tt>Add&nbsp;the&nbsp;path&nbsp;and&nbsp;end&nbsp;lines&nbsp;for&nbsp;the&nbsp;layer.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-addLine"><strong>addLine</strong></a>(self, line)</dt><dd><tt>Add&nbsp;a&nbsp;line&nbsp;of&nbsp;text&nbsp;and&nbsp;a&nbsp;newline&nbsp;to&nbsp;the&nbsp;output.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-addLines"><strong>addLines</strong></a>(self, lines)</dt><dd><tt>Add&nbsp;lines&nbsp;of&nbsp;text&nbsp;to&nbsp;the&nbsp;output.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-addRotatedLoopLayerToOutput"><strong>addRotatedLoopLayerToOutput</strong></a>(self, layerIndex, rotatedBoundaryLayer)</dt><dd><tt>Add&nbsp;rotated&nbsp;boundary&nbsp;layer&nbsp;to&nbsp;the&nbsp;output.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-addRotatedLoopLayersToOutput"><strong>addRotatedLoopLayersToOutput</strong></a>(self, rotatedBoundaryLayers)</dt><dd><tt>Add&nbsp;rotated&nbsp;boundary&nbsp;layers&nbsp;to&nbsp;the&nbsp;output.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-getInitializationForOutputSVG"><strong>getInitializationForOutputSVG</strong></a>(self, procedureName)</dt><dd><tt>Get&nbsp;initialization&nbsp;gcode&nbsp;for&nbsp;the&nbsp;output.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-getReplacedSVGTemplate"><strong>getReplacedSVGTemplate</strong></a>(self, fileName, procedureName, rotatedBoundaryLayers)</dt><dd><tt>Get&nbsp;the&nbsp;lines&nbsp;of&nbsp;text&nbsp;from&nbsp;the&nbsp;svg_layer.template&nbsp;file.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-getRounded"><strong>getRounded</strong></a>(self, number)</dt><dd><tt>Get&nbsp;number&nbsp;rounded&nbsp;to&nbsp;the&nbsp;number&nbsp;of&nbsp;carried&nbsp;decimal&nbsp;places&nbsp;as&nbsp;a&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-getRoundedComplexString"><strong>getRoundedComplexString</strong></a>(self, point)</dt><dd><tt>Get&nbsp;the&nbsp;rounded&nbsp;complex&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-getSVGLoopString"><strong>getSVGLoopString</strong></a>(self, loop)</dt><dd><tt>Get&nbsp;the&nbsp;svg&nbsp;loop&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="SVGCodecSkein-getSVGPathString"><strong>getSVGPathString</strong></a>(self, path)</dt><dd><tt>Get&nbsp;the&nbsp;svg&nbsp;path&nbsp;string.</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-getCarving"><strong>getCarving</strong></a>(fileName)</dt><dd><tt>Get&nbsp;a&nbsp;carving&nbsp;for&nbsp;the&nbsp;file&nbsp;using&nbsp;an&nbsp;import&nbsp;plugin.</tt></dd></dl>
+ <dl><dt><a name="-getParameterFromJavascript"><strong>getParameterFromJavascript</strong></a>(lines, parameterName, parameterValue)</dt><dd><tt>Get&nbsp;a&nbsp;parameter&nbsp;from&nbsp;lines&nbsp;of&nbsp;javascript.</tt></dd></dl>
+ <dl><dt><a name="-getReplaceWithLine"><strong>getReplaceWithLine</strong></a>(line, replaceWithTable)</dt><dd><tt>Parse&nbsp;the&nbsp;line&nbsp;and&nbsp;replace&nbsp;it&nbsp;a&nbsp;table&nbsp;key&nbsp;is&nbsp;in&nbsp;the&nbsp;line.</tt></dd></dl>
+ <dl><dt><a name="-getReplacedInQuotes"><strong>getReplacedInQuotes</strong></a>(original, replacement, text)</dt><dd><tt>Replace&nbsp;what&nbsp;follows&nbsp;in&nbsp;quotes&nbsp;after&nbsp;the&nbsp;word.</tt></dd></dl>
+ <dl><dt><a name="-getReplacedWordAndInQuotes"><strong>getReplacedWordAndInQuotes</strong></a>(original, replacement, text)</dt><dd><tt>Replace&nbsp;the&nbsp;word&nbsp;in&nbsp;the&nbsp;text&nbsp;and&nbsp;replace&nbsp;what&nbsp;follows&nbsp;in&nbsp;quotes&nbsp;after&nbsp;the&nbsp;word.</tt></dd></dl>
+ <dl><dt><a name="-parseLineReplaceWithTable"><strong>parseLineReplaceWithTable</strong></a>(firstWordTable, line, output, replaceWithTable)</dt><dd><tt>Parse&nbsp;the&nbsp;line&nbsp;and&nbsp;replace&nbsp;it&nbsp;if&nbsp;the&nbsp;first&nbsp;word&nbsp;of&nbsp;the&nbsp;line&nbsp;is&nbsp;in&nbsp;the&nbsp;first&nbsp;word&nbsp;table.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__author__</strong> = 'Enrique Perez (perez_enrique@yahoo.com)'<br>
+<strong>__date__</strong> = '$Date: 2008/02/05 $'<br>
+<strong>__license__</strong> = 'GPL 3.0'<br>
+<strong>absolute_import</strong> = _Feature((2, 5, 0, 'alpha', 1), (2, 7, 0, 'alpha', 0), 16384)</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Enrique&nbsp;Perez&nbsp;(perez_enrique@yahoo.com)</td></tr></table>
+</body></html>
