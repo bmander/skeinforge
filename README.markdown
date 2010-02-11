@@ -166,15 +166,18 @@ Comments and suggestions are welcome, however, I usually won't reply because dev
 The following examples forge the STL file Screw Holder.stl.  The examples are run in a terminal in the folder which contains Screw Holder.gts and skeinforge.py.
 
 > python skeinforge.py
+
 This brings up the dialog, after clicking 'Skeinforge', the following is printed:
 The exported file is saved as Screw Holder_export.gcode
 
 
 > python skeinforge.py Screw Holder.stl
+
 The exported file is saved as Screw Holder_export.gcode
 
 
 > python
+
 Python 2.5.1 (r251:54863, Sep 22 2007, 01:43:31)
 [GCC 4.2.1 (SUSE Linux)] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
