@@ -1,6 +1,6 @@
 This page is in the table of contents.
-==Overview==
-===Introduction===
+## Overview ##
+### Introduction ###
 Skeinforge is a GPL tool chain to forge a gcode skein for a model.
 
 The tool chain starts with carve, which carves the model into layers, then the layers are modified by other tools in turn like fill, comb, tower, raft, stretch, hop, wipe, oozebane, fillet & export.  Each tool automatically gets the gcode from the previous tool.  So if you want a carved & filled gcode, call the fill tool and it will call carve, then it will fill and output the gcode.  If you want to use all the tools, call export and it will call in turn all the other tools down the chain to produce the gcode file.
@@ -19,18 +19,18 @@ The interpret tool accesses and displays the import plugins.
 
 The default settings are similar to those on Nophead's machine.  A setting which is often different is the 'Extrusion Diameter' in carve.
 
-===Alternative===
+### Alternative ###
 Another way to make gcode for a model is to use the Java RepRap host program, described at:
 http://dev.www.reprap.org/bin/view/Main/DriverSoftware#Creating_GCode_files_from_STL_fi
 
-===Contribute===
+### Contribute ###
 You can contribute by helping develop the manual at:
 http://www.bitsfrombytes.com/wiki/index.php?title=Skeinforge
 
 There is also a forum thread about how to contribute to skeinforge development at:
 http://dev.forums.reprap.org/read.php?12,27562
 
-===Documentation===
+### Documentation ###
 There is a manual at:
 http://www.bitsfrombytes.com/wiki/index.php?title=Skeinforge
 
@@ -39,7 +39,7 @@ There is also documentation is in the documentation folder, in the doc strings f
 A list of other tutorials is at:
 http://www.bitsfrombytes.com/wiki/index.php?title=Skeinforge#Tutorials
 
-===Fabrication===
+### Fabrication ###
 To fabricate a model with gcode and the Arduino you can use the send.py in the fabricate folder.  The documentation for it is in the folder as send.html and at:
 http://reprap.org/bin/view/Main/ArduinoSend
 
@@ -73,7 +73,7 @@ http://www.bitsfrombytes.com/
 You can buy the Makerbot from Makerbot Industries at:
 http://www.makerbot.com/
 
-===File Formats===
+### File Formats ###
 An explanation of the gcodes is at:
 http://reprap.org/bin/view/Main/Arduino_GCode_Interpreter
 
@@ -98,7 +98,7 @@ http://en.wikipedia.org/wiki/STL_(file_format)
 
 If you're using an STL file and you can't even carve it, try converting it to a GNU Triangulated Surface file in Art of Illusion.  If it still doesn't carve, then follow the advice in the troubleshooting section.
 
-===Getting Skeinforge===
+### Getting Skeinforge ###
 The latest version is at:
 http://members.axion.net/~enrique/reprap_python_beanshell.zip
 
@@ -108,7 +108,7 @@ http://fabmetheus.blogspot.com/
 another sometimes out of date version is at:
 https://reprap.svn.sourceforge.net/svnroot/reprap/trunk/reprap/miscellaneous/python-beanshell-scripts/
 
-===Getting Started===
+### Getting Started ###
 For skeinforge to run, install python 2.x on your machine, which is available from:
 http://www.python.org/download/
 
@@ -138,10 +138,10 @@ When the skeinforge dialog pops up, click 'Skeinforge', choose the file which yo
 Or you can turn files into gcode by adding the file name, for example:
 > python skeinforge.py Screw Holder Bottom.stl
 
-===Motto===
+### Motto ###
 I may be slow, but I get there in the end.
 
-===Troubleshooting===
+### Troubleshooting ###
 If there's a bug, try downloading the very latest version because sometimes I update without posting.
 
 Then you can ask for skeinforge help by sending a private message through the forum software by going to my page at:
@@ -162,7 +162,7 @@ If you can't use the graphical interface, you can change the settings for skeinf
 Comments and suggestions are welcome, however, I usually won't reply because developing takes all my time and as of the time of this writing I have at least one year of features to implement.
 
 
-==Examples==
+## Examples ##
 The following examples forge the STL file Screw Holder.stl.  The examples are run in a terminal in the folder which contains Screw Holder.gts and skeinforge.py.
 
 > python skeinforge.py
